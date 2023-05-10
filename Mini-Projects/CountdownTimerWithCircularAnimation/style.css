@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 0 1rem;
+  height: 100vh;
+}
+h1{
+  font-weight: 300;
+  font-size: 26px;
+  letter-spacing: 0.1rem;
+}
+.progressCircle {
+  position: relative;
+  padding: 2rem;
+}
+.progressCircle .svg {
+  transform: rotate(-90deg);
+  margin: auto;
+}
+.progressCircle .svg circle {
+  transition: stroke-dashoffset 1s linear;
+  stroke-width: 1.5em;
+  stroke: #282828;
+}
+.progressCircle .time-remaining {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #282828;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.progressCircle .svg #bar-bg {
+  stroke-dashoffset: 0;
+}
+.progressCircle .svg #bar {
+  stroke-width: 0.6em;
+  stroke: #FFFFFF;
+}
+
+/* Style input and submit button*/
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 0.8rem 0rem;
+}
+input {
+  font-size: 100%;
+  padding: 0.5rem 1.25rem;
+  background: #6d6d6db3;
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 1.5rem;
+}
+input:focus {
+  outline: 0;
+}
+button {
+  transition: background 0.2s ease;
+  padding: 0.6rem;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 2px solid #282828;
+  color: #282828;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover {
+  background: #282828;
+  color: #FFFFFF;
+}

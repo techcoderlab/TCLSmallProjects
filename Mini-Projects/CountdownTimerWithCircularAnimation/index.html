@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coundown Timer Circular Animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Countdown Circular Animation</h1>
+
+    <div class="progressCircle">
+        <div id="svgWrapper">
+            <svg class="svg" width="220" height="220" viewPort="0 0 110 110" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+                <circle id="bar-bg" r="98" cx="110" cy="110" fill="transparent" stroke-dasharray="2,5" stroke-dashoffset="2,5"></circle>
+                <circle id="bar" r="98" cx="110" cy="110" fill="transparent" stroke-dasharray="615.752" stroke-dashoffset="0"></circle>
+            </svg>
+        </div>
+        <span id="time-remaining" class="time-remaining">00:00</span>
+    </div>
+    <div class="controls">
+        <p>Enter minutes</p>
+        <input  id="time-input" type="text" aria-labelledby="submit" value="0">
+        <button id="time-button" type="submit" id="submit">Get Set Go</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
