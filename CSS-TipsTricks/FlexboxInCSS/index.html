@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Flex</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <h1>Flex Wrap in CSS</h1>
+    <div class="container">
+      <div class="controls">
+        <h3>flex-direction</h3>
+        <input
+          type="radio"
+          name="flex-direction"
+          id="flex-direction-row"
+          value="row"
+          checked
+        />
+        <label for="flex-direction-row"> row (default) </label>
+        <input
+          type="radio"
+          name="flex-direction"
+          id="flex-direction-row-reverse"
+          value="row-reverse"
+        />
+        <label for="flex-direction-row-reverse"> row-reverse </label>
+        <input
+          type="radio"
+          name="flex-direction"
+          id="flex-direction-column"
+          value="column"
+        />
+        <label for="flex-direction-column"> column </label>
+        <input
+          type="radio"
+          name="flex-direction"
+          id="flex-direction-column-reverse"
+          value="column-reverse"
+        />
+        <label for="flex-direction-column-reverse"> column-reverse </label>
+
+        <h3>flex-wrap</h3>
+        <input
+          type="radio"
+          name="flex-wrap"
+          id="flex-wrap-nowrap"
+          value="nowrap"
+          checked
+        />
+        <label for="flex-wrap-nowrap"> nowrap (default) </label>
+        <input type="radio" name="flex-wrap" id="flex-wrap-wrap" value="wrap" />
+        <label for="flex-wrap-wrap"> wrap </label>
+        <input
+          type="radio"
+          name="flex-wrap"
+          id="flex-wrap-wrap-reverse"
+          value="wrap-reverse"
+        />
+        <label for="flex-wrap-wrap-reverse"> wrap-reverse </label>
+      </div>
+      <div class="controls">
+        <h3>justify-content</h3>
+        <input
+          type="radio"
+          name="justify-content"
+          id="justify-content-flex-start"
+          value="flex-start"
+          checked
+        />
+        <label for="justify-content-flex-start"> flex-start (default) </label>
+        <input
+          type="radio"
+          name="justify-content"
+          id="justify-content-center"
+          value="center"
+        />
+        <label for="justify-content-center"> center </label>
+        <input
+          type="radio"
+          name="justify-content"
+          id="justify-content-flex-end"
+          value="flex-end"
+        />
+        <label for="justify-content-flex-end"> flex-end </label>
+        <input
+          type="radio"
+          name="justify-content"
+          id="justify-content-space-evenly"
+          value="space-evenly"
+        />
+        <label for="justify-content-space-evenly"> space-evenly </label>
+        <input
+          type="radio"
+          name="justify-content"
+          id="justify-content-space-around"
+          value="space-around"
+        />
+        <label for="justify-content-space-around"> space-around </label>
+        <input
+          type="radio"
+          name="justify-content"
+          id="justify-content-space-between"
+          value="space-between"
+        />
+        <label for="justify-content-space-between"> space-between </label>
+
+        <h3>align-items</h3>
+        <input
+          type="radio"
+          name="align-items"
+          id="align-items-stretch"
+          value="stretch"
+          checked
+        />
+        <label for="align-items-stretch"> stretch (default) </label>
+        <input
+          type="radio"
+          name="align-items"
+          id="align-items-baseline"
+          value="baseline"
+        />
+        <label for="align-items-baseline"> baseline </label>
+        <input
+          type="radio"
+          name="align-items"
+          id="align-items-flex-start"
+          value="flex-start"
+        />
+        <label for="align-items-flex-start"> flex-start</label>
+        <input
+          type="radio"
+          name="align-items"
+          id="align-items-center"
+          value="center"
+        />
+        <label for="align-items-center"> center </label>
+        <input
+          type="radio"
+          name="align-items"
+          id="align-items-flex-end"
+          value="flex-end"
+        />
+        <label for="align-items-flex-end"> flex-end </label>
+      </div>
+
+      <div id="parent" class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
