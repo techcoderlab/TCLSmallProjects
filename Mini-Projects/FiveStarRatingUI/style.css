@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 2rem;
+  height: 100vh;
+  color: #282828;
+}
+h1 {
+  font-weight: 300;
+  font-size: 26px;
+  letter-spacing: 0.1rem;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  direction: rtl;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label svg {
+  width: 30px;
+  height: 30px;
+}
+
+label svg polygon {
+  fill: #999;
+  transition: 0.2s all ease-in-out;
+}
+
+input:not(:checked) ~ label:hover svg polygon,
+input:not(:checked) ~ label:hover ~ label svg polygon {
+  fill: #FFD700;
+}
+
+input:checked ~ label svg polygon {
+  fill: #FFD700;
+}
