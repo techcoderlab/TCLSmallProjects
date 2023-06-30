@@ -25,26 +25,21 @@ section {
   gap: 0.6rem;
   direction: rtl;
 }
-
 input[type="radio"] {
   display: none;
 }
-
 label svg {
   width: 30px;
   height: 30px;
 }
-
 label svg polygon {
   fill: #999;
   transition: 0.2s all ease-in-out;
 }
-
 input:not(:checked) ~ label:hover svg polygon,
 input:not(:checked) ~ label:hover ~ label svg polygon {
-  fill: #FFD700;
+  fill: #ffd700;
 }
-
 input:checked ~ label svg polygon {
-  fill: #FFD700;
+  fill: #ffd700;
 }
