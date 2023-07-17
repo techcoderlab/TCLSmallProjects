@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 2rem;
+  height: 100vh;
+  color: #FFFFFF;
+  background-color: #282828;
+}
+
+.password-container {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  font-size: 1.2em;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #282828;
+}
+
+input[type="text"],
+input[type="password"]
+{
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder
+{
+  color: #616161;
+} 
+
+
+@keyframes rotateEye {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveEyeIcon {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.toggle-password.clicked .fa-eye-slash {
+  animation: rotateEye 0.5s linear;
+}
+
+.toggle-password.clicked .fa-eye {
+  animation: rotateEye 0.5s linear reverse;
+}
+
+.toggle-password.clicked .fa-eye-slash,
+.toggle-password.clicked .fa-eye {
+  animation-fill-mode: forwards;
+}
+
+.toggle-password.clicked .fa-eye-slash:before {
+  animation: moveEyeIcon 0.5s linear;
+}
+
+.toggle-password.clicked .fa-eye:before {
+  animation: moveEyeIcon 0.5s linear reverse;
+}
+
+.toggle-password.clicked .fa-eye-slash:before,
+.toggle-password.clicked .fa-eye:before {
+  animation-fill-mode: forwards;
+}
+
