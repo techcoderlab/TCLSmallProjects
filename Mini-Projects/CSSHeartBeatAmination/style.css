@@ -1,0 +1,59 @@
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0c0c0c;
+  margin: 0;
+}
+
+.heart{
+  width: 100px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: beatingHeart 2s infinite alternate-reverse;
+  filter : drop-shadow(0 0 50px #a83f39)
+}
+
+.heart::before,
+.heart::after{
+  content: '';
+  background-color: #a83f39;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: -50%;
+  border-radius: 50px 50px 0 0;
+}
+.heart::before{
+  left: 20%;
+  transform: rotate(45deg);
+  transform-origin: 0 100%;
+}
+.heart::after{
+  left: 40%;
+  transform: rotate(-45deg);
+  transform-origin: 100% 100%;
+}
+
+
+@keyframes beatingHeart {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
