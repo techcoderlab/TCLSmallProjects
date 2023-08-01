@@ -1,0 +1,42 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #282828;
+  margin: 0;
+}
+.ball {
+  position: relative;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  inset: 0 auto auto 0;
+  background: url("basketball.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: move-ball-left 8s, move-ball-top 0.5s, rotate-ball 8s;
+  animation-timing-function: cubic-bezier(0.8, -150, 0.8, 150);
+  animation-iteration-count: infinite;
+}
+@keyframes rotate-ball {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes move-ball-left {
+  100% {
+    left: 1px;
+  }
+}
+@keyframes move-ball-top {
+  100% {
+    top: 1.5px;
+  }
+}
