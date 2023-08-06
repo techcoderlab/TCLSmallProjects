@@ -1,0 +1,31 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #282828;
+  margin: 0;
+}
+
+.icon{
+  width: 80px;
+  height: 80px;
+  padding: 25px;
+  animation: shake 2s forwards infinite;
+}
+
+@keyframes shake {
+  10%{
+    transform: rotate(60deg);
+  }
+  20%{
+    transform: rotate(-60deg);
+  }
+  30% {
+    transform: rotate(60deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+}
