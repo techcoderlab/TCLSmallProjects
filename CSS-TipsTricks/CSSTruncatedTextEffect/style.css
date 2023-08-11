@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background-color: #04F404;
+  color: #FFF;
+  height: 100vh;
+}
+
+:root {
+  /* Handy multiplier for consistency across elements */
+  --base: 1.35;
+  --background: #000000;
+}
+.card {
+  background-color: var(--background);
+  border-radius: 16px;
+  max-width: 30rem;
+  padding: calc(1rem * var(--base));
+  font-size: calc(1rem * var(--base));
+  line-height: var(--base);
+  text-align: justify;
+}
+.card p {
+  max-height: calc(4rem * var(--base) );
+  overflow: hidden; 
+  position: relative;
+}
+.card p:after {
+  content: "";
+  width: 100%;
+  height: calc(1rem * var(--base) + 1px);
+  background: linear-gradient(to right, transparent, var(--background) 80%);
+  display: block;
+  position: absolute;
+  inset-block-end: 0;
+  pointer-events: none;
+}
+
+/* p{
+  border-radius: 10px;
+  color: #282828;
+  background-color: #FFF;
+  padding: 10px;
+  margin: 20px;
+  font-size: 1.4rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-weight: lighter;
+}
+
+  .text{
+    white-space: nowrap;
+    max-width: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+
+
+
+
+
+
+
+
