@@ -1,0 +1,102 @@
+body {
+  font-family     : "Roboto", sans-serif;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  height          : 100vh;
+  background-color: #0c0c0c;
+  margin          : 0;
+}
+
+:root {
+  --size       : 400px;
+  --color      : rgb(2, 52, 20);
+  --height     : calc((var(--size) * 2) / 3);
+  --moonSize   : calc(var(--height) / 16);
+  --starSize   : calc(var(--height) / 10);
+  --shine-color: rgba(255, 255, 255, 0.247);
+}
+.flag {
+  position        : absolute;
+  width           : var(--size);
+  height          : var(--height);
+  inset           : 50% auto auto 50%;
+  margin          : calc(var(--height) / -2) auto auto calc(var(--size) / -2);
+  background-color: var(--color);
+  overflow        : hidden;
+  border-radius   : 10px;
+}
+.flag::before {
+  content         : "";
+  display         : block;
+  width           : calc(var(--size) / 4);
+  height          : 100%;
+  background-color: #FFFFFF;
+}
+.flag::after {
+  content         : "";
+  position        : absolute;
+  inset           : 0 0 calc(var(--moonSize) * 2) calc(calc(var(--size) / 4) + var(--moonSize)) ;
+  margin          : auto;
+  width           : calc(var(--height) / 2);
+  height          : calc(var(--height) / 2);
+  background-color: transparent;
+  border-radius   : 50%;
+  box-shadow      : calc(var(--moonSize) * -1) var(--moonSize) 0
+    calc(var(--moonSize) / 3) #FFFFFF;
+}
+.star {
+  position        : absolute;
+  width           : 0;
+  height          : 0;
+  inset           : 36% 24% auto auto;
+  border          : var(--starSize) solid rgba(0, 0, 0, 0);
+  border-bottom   : calc(var(--starSize) * 0.75) solid #FFFFFF;
+  border-top-width: 0;
+}
+.star::before {
+  content : "";
+  position: absolute;
+  width   : 0;
+  height  : 0;
+  inset   : 0 auto auto 0;
+  border  : calc(var(--starSize) - calc(var(--starSize) * 0.75)) solid
+    rgba(0, 0, 0, 0);
+  border-bottom   : calc(var(--starSize) * 0.75) solid #FFFFFF;
+  border-top-width: 0;
+  transform       : rotate(-35deg)
+    translate(0, calc(calc(var(--starSize) * 0.74) * -1));
+  transform-origin: bottom;
+}
+.star::after {
+  content         : "";
+  position        : absolute;
+  inset           : 0 auto auto calc(var(--starSize) * -1);
+  border          : var(--starSize) solid rgba(0, 0, 0, 0);
+  border-bottom   : calc(var(--starSize) * 0.75) solid #FFFFFF;
+  border-top-width: 0;
+  transform       : rotate(-75deg);
+}
+
+.shine-wrapper {
+  position  : absolute;
+  width     : var(--size);
+  height    : var(--height);
+  inset     : 0 auto auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--shine-color) 60%,
+    transparent 100%
+  );
+  animation: shine-animation 8s linear infinite;
+}
+@keyframes shine-animation {
+  0% {
+    background-position: -400px 0px, -400px 0px, -400px 0px, -400px 0px;
+  }
+
+  100% {
+    background-position: 800px 0px, 800px 0px, 800px 0px, 800px 0px;
+  }
+}
