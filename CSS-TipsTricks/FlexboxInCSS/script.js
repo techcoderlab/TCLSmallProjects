@@ -1,6 +1,5 @@
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const parentDiv = document.getElementById("parent");
-
 radioButtons.forEach(function (radio) {
   radio.addEventListener("change", function (event) {
     const selectedRadioButtonName = this.name;

@@ -32,5 +32,4 @@ function changeProperty() {
     circle3.style.zIndex = value;
     circle3.textContent = "z-index = " + value;
   }
-
 }

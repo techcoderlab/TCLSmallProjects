@@ -41,7 +41,6 @@ async function getData() {
 }
 
 function filterData(searchTerm) {
-function filterData(searchTerm) {
   filteredItems.length = 0;
 
   listItems.forEach((item) => {
