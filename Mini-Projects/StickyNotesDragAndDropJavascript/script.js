@@ -70,7 +70,7 @@ function userPressed(event) {
   paperElement = event.target;
 
   if (paperElement.classList.contains("paper")) {
-    paperElement.style.paperShadow = "-8px 8px 14px -8px rgba(0, 0, 0, 0.70)";
+    paperElement.style.boxShadow = "-8px 8px 14px -8px rgba(0, 0, 0, 0.70)";
     paperElement.style.transform = "scale(1.05)";
     paperElement.style.cursor = "grabbing";
 
@@ -104,7 +104,7 @@ function userMoved(event) {
 }
 
 function userReleased() {
-  paperElement.style.paperShadow = "-4px 4px 12px -6px rgba(0, 0, 0, 0.75)";
+  paperElement.style.boxShadow = "-4px 4px 12px -6px rgba(0, 0, 0, 0.75)";
   paperElement.style.transform = "scale(1.00)";
   paperElement.style.cursor = "grab";
   container.removeEventListener("pointermove", userMoved);
