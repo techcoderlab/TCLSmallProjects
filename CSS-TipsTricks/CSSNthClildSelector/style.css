@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+  background-color: #ffc30c;
+  color: #1f1f1f;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.child {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  cursor: default;
+}
+
+.child .circles .circle {
+  display: inline-flex;
+  background-image: url("png/heart-outline.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  aspect-ratio: 1/1;
+  margin: 0 2px;
+}
+
+#first-child:hover .circles .circle:first-child {
+  background-image: url("png/heart.png");
+}
+#last-child:hover .circles .circle:last-child {
+  background-image: url("png/heart.png");
+}
+#nth-child-2:hover .circles .circle:nth-child(2) {
+  background-image: url("png/heart.png");
+}
+#nth-last-child-2:hover .circles .circle:nth-last-child(2) {
+  background-image: url("png/heart.png");
+}
+
+#nth-child-even:hover .circles .circle:nth-child(even) {
+  background-image: url("png/heart.png");
+}
+#nth-child-odd:hover .circles .circle:nth-child(odd) {
+  background-image: url("png/heart.png");
+}
+
+#nth-child-nplus4:hover .circles .circle:nth-child(n + 4) {
+  background-image: url("png/heart.png");
+}
+#nth-child-2nplus1:hover .circles .circle:nth-child(2n + 1) {
+  background-image: url("png/heart.png");
+}
+#nth-child-2nminus1:hover .circles .circle:nth-child(2n-1) {
+  background-image: url("png/heart.png");
+}
+#nth-child-4n:hover .circles .circle:nth-child(4n) {
+  background-image: url("png/heart.png");
+}
